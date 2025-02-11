@@ -239,7 +239,7 @@ function M.debug_test(custom_config)
   return true
 end
 
-function M.debug_last_test()
+function M.debug_last_test(custom_config)
   local testname = M.last_testname
   local testpath = M.last_testpath
 
@@ -256,7 +256,7 @@ function M.debug_last_test()
     extra_args = { "-test.v" }
   end
 
-  debug_test(testname, testpath, M.test_buildflags, extra_args)
+  debug_test(testname, testpath, M.test_buildflags, extra_args, custom_config)
 
   return true
 end
